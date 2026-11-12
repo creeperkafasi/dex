@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+Name=dex
+GenericName=Android Desktop
+Comment=Use your Android phone's apps in desktop windows
+Exec=dex
+Icon=dex
+Terminal=false
+Categories=Utility;
+Keywords=android;phone;adb;scrcpy;mirror;desktop;
+StartupWMClass=dex
+StartupNotify=true

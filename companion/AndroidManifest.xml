@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- dex companion: serves app icons to the dex desktop over adb. No UI, no
+     network, no background service. Only adb's shell user may query it. -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="dev.dex.companion">
+
+    <!-- Needed to see (and draw icons of) other installed apps on Android 11+. -->
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" />
+
+    <application android:label="dex companion" android:hasCode="true" android:allowBackup="false">
+        <provider
+            android:name=".IconProvider"
+            android:authorities="dev.dex.companion.icons"
+            android:exported="true" />
+    </application>
+</manifest>

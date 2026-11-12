@@ -1,0 +1,20 @@
+[package]
+name = "dex"
+version = "0.1.0"
+edition = "2024"
+license = "Apache-2.0"
+description = "A desktop shell for Android: your phone's apps in resizable windows, streamed with scrcpy-server"
+
+[dependencies]
+cpal = "0.18"
+chrono = { version = "0.4", default-features = false, features = ["clock"] }
+eframe = { version = "0.35", default-features = false, features = ["wgpu", "wayland", "x11", "default_fonts"] }
+egui = "0.35"
+ffmpeg-next = "9"
+png = "0.18"
+
+[profile.release]
+lto = "thin"
+
+[dev-dependencies]
+egui_kittest = { version = "0.35", features = ["wgpu", "snapshot"] }
